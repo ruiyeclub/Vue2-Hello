@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-html指令</title>
+</head>
+<body>
+<div id="app">
+    <h2 v-html="content"></h2>
+    <h2 v-text="content"></h2>
+</div>
+<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+<script src="js/v2.7.14/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            // content: "ruiyeclub"
+            content: "<a href=\"http://www.ruiyeclub.cn\">ruiyeclub</a>"
+        }
+    })
+</script>
+</body>
+</html>
