@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-text指令</title>
+</head>
+<body>
+<div id="app">
+    <h2 v-text="message+'!'">深圳</h2>
+    <h2 v-text="info+'!'">深圳</h2>
+    <h2>{{ message }}深圳</h2>
+</div>
+<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+<script src="js/v2.7.14/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            message: "ruiyeclub",
+            info: "前端信息"
+        }
+    })
+</script>
+</body>
+</html>
