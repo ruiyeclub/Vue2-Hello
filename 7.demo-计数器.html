@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo-计数器</title>
+</head>
+<body>
+<div id="app">
+    <!--  计数器功能  -->
+    <div class="input-num">
+        <button @click="sub">-</button>
+        <span>{{ num }}</span>
+        <button @click="add">+</button>
+    </div>
+    <!--    <img src="http://ray4j.top/images/avatar.jpg" alt=""/>-->
+</div>
+<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+<script src="js/v2.7.14/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            num: 1
+        },
+        methods: {
+            add: function () {
+                if (this.num >= 10) {
+                    alert('别点了')
+                } else {
+                    this.num++
+                }
+            },
+            sub: function () {
+                if (this.num <= 0) {
+                    alert('别点了')
+                } else {
+                    this.num--
+                }
+            }
+        }
+    })
+</script>
+</body>
+</html>
