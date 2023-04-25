@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-if指令</title>
+</head>
+<body>
+<div id="app">
+    <input type="button" value="切换显示" @click="change">
+    <p v-if="isShow">ruiyeclub</p>
+    <p v-show="isShow">ruiyeclub niubi</p>
+    <h2 v-if="temperature>=35">热</h2>
+</div>
+<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+<script src="js/v2.7.14/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            isShow: false,
+            temperature: 40
+        },
+        methods: {
+            change: function () {
+                this.isShow = !this.isShow
+            }
+        }
+    })
+</script>
+</body>
+</html>
