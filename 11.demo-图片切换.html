@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo-图片切换</title>
+</head>
+<body>
+<div id="mask">
+    <div class="center">
+        <!--封面图-->
+        <img :src="imgArr[index]" alt="">
+        <!--左箭头-->
+        <a href="javascript:void(0)" v-show="index!==0" @click="prev" class="left">
+            <img src="image/arrow-left.png" alt="">
+        </a>
+        <!--右箭头-->
+        <a href="javascript:void(0)" v-show="index<imgArr.length-1" @click="next" class="right">
+            <img src="image/arrow-right.png" alt="">
+        </a>
+    </div>
+</div>
+<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+<script src="js/v2.7.14/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: "#mask",
+        data: {
+            imgArr: [
+                "./image/nba1.jpeg",
+                "./image/nba2.jpeg",
+                "./image/nba3.jpeg",
+            ],
+            index: 0
+        },
+        methods: {
+            prev: function () {
+                this.index--
+            },
+            next: function () {
+                this.index++
+            }
+        }
+    })
+</script>
+</body>
+</html>
